@@ -1,24 +1,45 @@
+import java.util.Calendar;
 import java.util.Date;
 
-public class Deadline implements IDeadline{
-
+/**
+ * The type Deadline.
+ */
+public class Deadline implements IDeadline {
     private Date date;
 
+    /**
+     * Instantiates a new Deadline.
+     *
+     * @param date the date
+     */
     public Deadline(Date date) {
         this.date = date;
     }
 
+    /**
+     * Instantiates a new Deadline.
+     *
+     * @param days the days
+     */
     public Deadline(int days) {
-        // TODO Je ne sais pas quoi mettre dans ce constructeur
-        // via calandar getInstanceCalandar
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DAY_OF_MONTH, days);
+        this.date = calendar.getTime();
     }
 
-    private void setDeadLine(int days){
-        // TODO Je ne sais pas quoi mettre dans ce setter
+    private void setDeadLine(int days) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DAY_OF_MONTH, days);
+        this.date = calendar.getTime();
     }
 
     @Override
     public boolean expired() {
-        return false;
+        if(this.date.before(Calendar.getInstance().getTime())){
+            return true;
+        }
+        {
+            return false;
+        }
     }
 }

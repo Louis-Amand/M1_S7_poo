@@ -1,15 +1,29 @@
-public abstract class ConsumerProduct implements Product{
+/**
+ * The type Consumer product.
+ */
+public abstract class ConsumerProduct implements Product {
 
     private static final double VAT = 0.2;
-    private String name;
-    private double price;
+    private final String name;
+    private final double price;
 
+    /**
+     * Instantiates a new Consumer product.
+     *
+     * @param name  the name
+     * @param price the price
+     */
     public ConsumerProduct(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    public double getVAT(){
+    /**
+     * Get vat double.
+     *
+     * @return the double
+     */
+    public double getVAT() {
         return VAT;
     }
 
@@ -20,12 +34,12 @@ public abstract class ConsumerProduct implements Product{
 
     @Override
     public double getVatPrice() {
-        return (getVAT()+1)*getPrice();
+        return (getVAT() + 1) * getPrice();
     }
 
     @Override
     public double getVatAmount() {
-        return getVAT()*getPrice();
+        return getVAT() * getPrice();
     }
 
     @Override
@@ -35,11 +49,11 @@ public abstract class ConsumerProduct implements Product{
 
     @Override
     public double getUnitVatPrice() {
-        return getUnitPrice()*(getVAT()+1);
+        return getUnitPrice() * (getVAT() + 1);
     }
 
     @Override
     public double getUnitVatAmount() {
-        return getUnitPrice()*getVAT();
+        return getUnitPrice() * getVAT();
     }
 }
