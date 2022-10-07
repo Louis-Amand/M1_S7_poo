@@ -1,6 +1,6 @@
 public abstract class ConsumerProduct implements Product{
 
-    private static final double VAT = 20.0;
+    private static final double VAT = 0.2;
     private String name;
     private double price;
 
@@ -19,27 +19,27 @@ public abstract class ConsumerProduct implements Product{
     }
 
     @Override
-    public double getValPrice() {
-        return 0;
+    public double getVatPrice() {
+        return (getVAT()+1)*getPrice();
     }
 
     @Override
     public double getVatAmount() {
-        return VAT;
+        return getVAT()*getPrice();
     }
 
     @Override
     public double getUnitPrice() {
-        return 0;
+        return getPrice();
     }
 
     @Override
     public double getUnitVatPrice() {
-        return 0;
+        return getUnitPrice()*(getVAT()+1);
     }
 
     @Override
     public double getUnitVatAmount() {
-        return 0;
+        return getUnitPrice()*getVAT();
     }
 }

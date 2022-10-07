@@ -1,6 +1,6 @@
 public interface Product {
     double getPrice();
-    double getValPrice();
+    double getVatPrice();
     double getVatAmount();
     double getUnitPrice();
     double getUnitVatPrice();

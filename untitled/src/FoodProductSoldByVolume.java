@@ -5,8 +5,7 @@ public class FoodProductSoldByVolume extends FoodProduct{
         this.volume = volume;
     }
 
-    @Override
     public double getUnitPrice() {
-        return super.getUnitPrice();
+        return super.getPrice()/this.volume;
     }
 }
