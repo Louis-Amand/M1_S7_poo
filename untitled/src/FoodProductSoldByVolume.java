@@ -1,5 +1,7 @@
 public class FoodProductSoldByVolume extends FoodProduct{
-    public FoodProductSoldByVolume(String name, double price, int days) {
+    private double volume;
+    public FoodProductSoldByVolume(String name, double price, double volume, int days) {
         super(name, price, days);
+        this.volume = volume;
     }
 }

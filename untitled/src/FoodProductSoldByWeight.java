@@ -1,5 +1,7 @@
 public class FoodProductSoldByWeight extends FoodProduct{
-    public FoodProductSoldByWeight(String name, double price, int days) {
+    private double weight;
+    public FoodProductSoldByWeight(String name, double price, double weight, int days) {
         super(name, price, days);
+        this.weight = weight;
     }
 }
