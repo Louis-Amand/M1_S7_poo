@@ -15,7 +15,7 @@ public abstract class ConsumerProduct implements Product{
 
     @Override
     public double getPrice() {
-        return 0;
+        return this.price;
     }
 
     @Override
@@ -25,7 +25,7 @@ public abstract class ConsumerProduct implements Product{
 
     @Override
     public double getVatAmount() {
-        return 0;
+        return VAT;
     }
 
     @Override

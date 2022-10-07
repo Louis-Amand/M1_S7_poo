@@ -4,4 +4,8 @@ public class FoodProductSoldByWeight extends FoodProduct{
         super(name, price, days);
         this.weight = weight;
     }
+    @Override
+    public double getUnitPrice() {
+        return super.getUnitPrice();
+    }
 }
