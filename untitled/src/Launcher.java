@@ -17,5 +17,9 @@ public class Launcher {
         System.out.println(f2.getVAT());
         System.out.println(f2.getUnitVatPrice());
         System.out.println(f2.expired());
+
+        UnitProduct u1 = new UnitProduct("cannelés", 10, 8);
+        System.out.println(u1.getUnitPrice());
+        System.out.println(u1.getUnitVatPrice());
     }
 }
