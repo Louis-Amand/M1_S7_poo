@@ -27,32 +27,27 @@ public abstract class ConsumerProduct implements Product {
         return VAT;
     }
 
-    @Override
+
     public double getPrice() {
         return this.price;
     }
-
-    @Override
+    
     public double getVatPrice() {
         return (getVAT() + 1) * getPrice();
     }
 
-    @Override
+
     public double getVatAmount() {
         return getVAT() * getPrice();
     }
 
-    @Override
-    public double getUnitPrice() {
-        return getPrice();
-    }
 
-    @Override
+    public abstract double getUnitPrice();
+
     public double getUnitVatPrice() {
         return getUnitPrice() * (getVAT() + 1);
     }
 
-    @Override
     public double getUnitVatAmount() {
         return getUnitPrice() * getVAT();
     }
